@@ -17,7 +17,6 @@ namespace StockSentry.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Define relationships and any additional configurations here
             modelBuilder.Entity<InventoryItem>()
                 .HasOne(i => i.Category)
                 .WithMany(c => c.InventoryItems)
